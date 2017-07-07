@@ -51,13 +51,13 @@ const shortHexCode = minifyHexCode('#000000');
 Reference your local script:
 
 ```html
-<script src="node_modules/minify-hex-code/dist/minify-hex-code.min.js"></script>
+<script src="node_modules/minify-hex-code/lib/minify-hex-code.min.js"></script>
 ```
 
 Or load the script via jsdelivr:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/minify-hex-code@latest/dist/minify-hex-code.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/minify-hex-code@latest/lib/minify-hex-code.min.js"></script>
 ```
 
 And execute the script:
