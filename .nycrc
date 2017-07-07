@@ -1,0 +1,13 @@
+{
+  "require": [
+    "babel-register"
+  ],
+  "sourceMap": true,
+  "reporter": [
+    "lcov",
+    "text",
+    "html"
+  ],
+  "check-coverage": true,
+  "babel-cache": true
+}
