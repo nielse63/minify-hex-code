@@ -7,7 +7,7 @@
 [![NPM version](https://badge.fury.io/js/minify-hex-code.svg)](http://badge.fury.io/js/minify-hex-code)
 [![npm](https://img.shields.io/npm/dt/minify-hex-code.svg?style=flat-square)](https://www.npmjs.com/package/minify-hex-code)
 
-A color conversion library
+Convert 6-character hex codes to 3-characters
 
 ## Installation
 

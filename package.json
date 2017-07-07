@@ -1,7 +1,7 @@
 {
   "name": "minify-hex-code",
   "version": "1.0.0",
-  "description": "A color conversion library",
+  "description": "Convert 6-character hex codes to 3-characters",
   "main": "index.js",
   "repository": "https://github.com/nielse63/minify-hex-code",
   "author": {
