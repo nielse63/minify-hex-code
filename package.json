@@ -1,6 +1,6 @@
 {
   "name": "minify-hex-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert 6-character hex codes to 3-characters",
   "main": "index.js",
   "repository": "https://github.com/nielse63/minify-hex-code",
@@ -11,7 +11,13 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/nielse63/minify-hex-code",
-  "keywords": ["css", "hex", "minify", "code", "shorten"],
+  "keywords": [
+    "css",
+    "hex",
+    "minify",
+    "code",
+    "shorten"
+  ],
   "bugs": "https://github.com/nielse63/minify-hex-code/issues",
   "scripts": {
     "lint": "eslint src ./*.js",
