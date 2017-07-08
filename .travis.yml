@@ -22,6 +22,6 @@ env:
 
 script:
   - (eval "yarn run $TEST_COMMAND")
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" && -d ./coverage ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
 
 after_success: yarn run coverage
