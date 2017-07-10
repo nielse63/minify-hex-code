@@ -20,7 +20,7 @@
   ],
   "bugs": "https://github.com/nielse63/minify-hex-code/issues",
   "scripts": {
-    "lint": "eslint src ./*.js",
+    "lint": "eslint src ./*.js --ignore-pattern '!.eslintrc.js'",
     "minify": "uglifyjs lib/minify-hex-code.js -m -c -o lib/minify-hex-code.min.js",
     "rollup": "rollup --input lib/minify-hex-code.js --format umd --output lib/minify-hex-code.js",
     "prebuild": "rm -rf lib && npm run lint && mkdir lib",
