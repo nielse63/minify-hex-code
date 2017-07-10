@@ -39,15 +39,6 @@ or using ES5 syntax:
 const minifyHexCode = require('minify-hex-code');
 ```
 
-And execute the script:
-
-```js
-const shortHexCode = minifyHexCode('#000000');
-// #000
-```
-
-### In the browser
-
 Reference your local script:
 
 ```html

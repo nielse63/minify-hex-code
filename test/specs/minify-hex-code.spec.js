@@ -33,6 +33,7 @@ const colors = {
     '#84ede0',
   ]
 };
+const objects = [false, 123, {}, []]
 
 export default function MinifyHexCodeSpec() {
   describe('MinifyHexCode', () => {
@@ -62,7 +63,7 @@ export default function MinifyHexCodeSpec() {
       });
 
       context('sad path', () => {
-        [false, 123, {}, []].forEach(function(object) {
+        objects.forEach(function(object) {
           it('should fail', () => {
             expect(
               isString(object)
@@ -84,7 +85,7 @@ export default function MinifyHexCodeSpec() {
       })
 
       context('bad path', () => {
-        [false, 123, {}, []].forEach(function(object) {
+        objects.forEach(function(object) {
           it('should throw error', () => {
             expect(
               minifyHexCode.bind(null, object)
