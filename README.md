@@ -11,15 +11,8 @@ Convert 6-character hex codes to 3-characters
 
 ## Installation
 
-### With `npm`
-
-```sh
+```bash
 npm install minify-hex-code
-```
-
-### With `yarn`
-
-```sh
 yarn add minify-hex-code
 ```
 
@@ -31,49 +24,33 @@ Import the script to your project
 
 ```js
 import minifyHexCode from 'minify-hex-code';
-```
-
-or using ES5 syntax:
-
-```js
+// or
 const minifyHexCode = require('minify-hex-code');
-```
-
-Reference your local script:
-
-```html
-<script src="node_modules/minify-hex-code/lib/minify-hex-code.min.js"></script>
-```
-
-Or load the script via jsdelivr:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/minify-hex-code@latest/lib/minify-hex-code.min.js"></script>
 ```
 
 And execute the script:
 
 ```js
-const shortHexCode = minifyHexCode('#000000');
-// #000
+const shortHexCode = minifyHexCode('#000000'); // #000
+const shortHexCode = minifyHexCode('#eeeeee'); // #000
+const shortHexCode = minifyHexCode();          // throws error
 ```
 
 ## Contributing
 
 Fork the repo and clone locally, then run:
 
-```sh
+```bash
 yarn install
 ```
 
-This will install the `devDependencies` packages and build the `dist` folder.
+This will install the `devDependencies` packages and build the `lib` folder.
 
 Once you've made your desired changes, make sure to write any new tests for
 your feature and run the tests:
 
 ```sh
 yarn run lint # lints js
-
 yarn test     # runs test suite
 ```
 
