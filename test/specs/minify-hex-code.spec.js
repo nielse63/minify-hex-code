@@ -1,5 +1,5 @@
-
-import minifyHexCode, { isString } from '../../src/minify-hex-code';
+const minifyHexCode = require('../../lib/minify-hex-code');
+const { objects } = require('../shared');
 
 const colors = {
   long: [
@@ -31,68 +31,37 @@ const colors = {
     '#8546f2',
     '#3fd3ac',
     '#84ede0',
-  ]
+  ],
 };
-const objects = [false, 123, {}, []]
 
-export default function MinifyHexCodeSpec() {
-  describe('MinifyHexCode', () => {
-    describe('sanity', () => {
-      it('isString should be a function', () => {
-        expect(isString).to.be.a.function;
-      });
-
-      it('minifyHexCode should be a function', () => {
-        expect(minifyHexCode).to.be.a.function;
-      });
-    });
-
-    describe('#isString', () => {
-      context('happy path', () => {
-        it('should pass', () => {
-          expect(
-            isString('howdy')
-          ).to.be.true;
-        });
-
-        it('should pass', () => {
-          expect(
-            isString('')
-          ).to.be.true;
-        });
-      });
-
-      context('sad path', () => {
-        objects.forEach(function(object) {
-          it('should fail', () => {
-            expect(
-              isString(object)
-            ).to.be.false;
-          });
-        })
-      });
-    });
-
-    describe('#minifyHexCode', () => {
-      context('happy path', () => {
-        colors.long.forEach(function(color, i) {
-          it('should shorten hex codes', function() {
-            expect(
-              minifyHexCode(color)
-            ).to.equal(colors.short[i]);
-          })
-        })
-      })
-
-      context('bad path', () => {
-        objects.forEach(function(object) {
-          it('should throw error', () => {
-            expect(
-              minifyHexCode.bind(null, object)
-            ).to.throw('Invalid hex code string provided');
-          });
-        })
-      })
+describe('minifyHexCode', () => {
+  describe('sanity', () => {
+    it('minifyHexCode should be a function', () => {
+      expect(minifyHexCode).to.be.a.function;
     });
   });
-}
+
+  context('happy path', () => {
+    colors.long.forEach((color, i) => {
+      it('should shorten hex codes', () => {
+        expect(minifyHexCode(color)).to.equal(colors.short[i]);
+      });
+    });
+  });
+
+  context('bad path', () => {
+    it('should handle no input', () => {
+      expect(minifyHexCode.bind(null, undefined)).to.throw(
+        'Invalid hex code string provided',
+      );
+    });
+
+    objects.forEach(object => {
+      it('should throw error', () => {
+        expect(minifyHexCode.bind(null, object)).to.throw(
+          'Invalid hex code string provided',
+        );
+      });
+    });
+  });
+});

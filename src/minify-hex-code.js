@@ -1,10 +1,9 @@
+// @flow
 
-export function isString(object) {
-  return typeof object === 'string';
-}
+const { isString } = require('./utils');
 
-export default function minifyHexCode(string) {
-  if (!isString(string)) {
+module.exports = function minifyHexCode(string: string = ''): string {
+  if (!string || !isString(string)) {
     throw new TypeError('Invalid hex code string provided');
   }
 
@@ -20,4 +19,4 @@ export default function minifyHexCode(string) {
     color = (r + g + b).toLowerCase();
   }
   return `#${color}`;
-}
+};
