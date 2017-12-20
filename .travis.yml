@@ -1,6 +1,4 @@
-env:
-  global:
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
 language: node_js
 node_js:
   - "node"
@@ -12,16 +10,8 @@ cache:
     - node_modules
 install:
   - yarn
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-
-env:
-  - TEST_COMMAND="lint"
-  - TEST_COMMAND="test"
 
 script:
-  - (eval "yarn run $TEST_COMMAND")
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" && -d ./coverage ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - yarn test
 
 after_success: yarn run coverage
