@@ -1,6 +1,6 @@
 {
   "name": "minify-hex-code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert 6-character hex codes to 3-characters",
   "repository": {
     "type": "git",
