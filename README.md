@@ -5,7 +5,7 @@
 [![devDependencies Status](https://david-dm.org/nielse63/minify-hex-code/dev-status.svg)](https://david-dm.org/nielse63/minify-hex-code?type=dev)
 [![Code Climate](https://codeclimate.com/github/nielse63/minify-hex-code/badges/gpa.svg)](https://codeclimate.com/github/nielse63/minify-hex-code)
 [![NPM version](https://badge.fury.io/js/minify-hex-code.svg)](http://badge.fury.io/js/minify-hex-code)
-[![npm](https://img.shields.io/npm/dt/minify-hex-code.svg?style=flat-square)](https://www.npmjs.com/package/minify-hex-code)
+[![npm](https://img.shields.io/npm/dt/minify-hex-code.svg?style=flat-square)](https://www.npmjs.com/package/minify-hex-code) [![Greenkeeper badge](https://badges.greenkeeper.io/nielse63/minify-hex-code.svg)](https://greenkeeper.io/)
 
 Convert 6-character hex codes to 3-characters
 
